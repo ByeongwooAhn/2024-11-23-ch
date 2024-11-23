@@ -1,10 +1,7 @@
 package com.ll.ch.damain.chat.chatRoom.controller;
 
 import com.ll.ch.damain.chat.chatRoom.entity.ChatRoom;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,6 +10,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/chat/rooms")
+@CrossOrigin(
+        origins = "https://cdpn.io"
+)
 public class ApiV1ChatControllers {
     private final List<ChatRoom> chatRooms = new ArrayList<>() {{
         // 아래는 샘플데이터 생성코드 입니다.
